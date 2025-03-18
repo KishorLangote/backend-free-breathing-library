@@ -103,38 +103,6 @@ router.get("/get-all-books", async (req, res) => {
     }
 })
 
-// router.get("/get-all-books", async (req, res) => {
-//   try {
-//       // Extract query parameters (use req.query instead of req.body for GET requests)
-//       const { page = 1, limit = 9 } = req.query; 
-
-//       // Convert values to numbers
-//       const pageNumber = parseInt(page);
-//       const limitNumber = parseInt(limit);
-
-//       // Calculate the number of documents to skip
-//       const skip = (pageNumber - 1) * limitNumber;
-
-//       // Fetch books with pagination
-//       const books = await Book.find()
-//           .sort({ createdAt: -1 }) // Newest books first
-//           .skip(skip)
-//           .limit(limitNumber);
-
-//       // Get total book count
-//       const totalBooks = await Book.countDocuments();
-
-//       return res.json({
-//           totalBooks,
-//           totalPages: Math.ceil(totalBooks / limitNumber),
-//           currentPage: pageNumber,
-//           books,
-//       });
-//   } catch (error) {
-//       res.status(500).json({ message: "Internal server error", error: error.message });
-//   }
-// });
-
 
 // get recently added books limit 4
 router.get("/get-recent-books", async (req, res) => {
