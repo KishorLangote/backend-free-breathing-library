@@ -8,7 +8,7 @@ router.post("/", async (req, res) => {
     try {
         const newReview = new Review(req.body);
         await newReview.save();
-        res.status(201).json({ message: "Review submitted successfully" });
+        res.status(201).json({ message: "Review submitted successfully." });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
