@@ -110,6 +110,7 @@ router.get("/get-user-information", authenticateToken, async (req, res) => {
     if (!userInfo) {
       return res.status(404).json({ message: "User not found" });
     }
+    console.log("user info:", userInfo)
     return res.status(200).json(userInfo);
   } catch (error) {
     console.error("Get User Info Error:", error);
