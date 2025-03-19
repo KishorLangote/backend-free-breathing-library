@@ -5,7 +5,7 @@ const authenticateToken = (req, res, next) => {
   const token = authHeader && authHeader.split(" ")[1]; 
   
   if(token == null) {
-    return res.status(401).json({ message: "Authentication token requried "})
+    return res.status(401).json({ message: "Authentication token requried" })
   }
 
   jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
