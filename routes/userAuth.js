@@ -15,8 +15,8 @@ const authenticateToken = (req, res, next) => {
     if(err){
       return res.status(403).json({ message: "Token expired. Please signIn again" })
     }
-    console.log("Decoded Token:", user); // Debugging: See if user data is there
-    req.user = user;   // Attach decoded user data (id, name, role) to req.user
+    console.log("Decoded Token:", user); // if user data is there
+    req.user = user;   // decoded user data (id, name, role) to req.user
     next()
   })
 }
