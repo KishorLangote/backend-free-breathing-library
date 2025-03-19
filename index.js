@@ -15,8 +15,7 @@ const app = express();
 
 const corsOptions = {
   origin: "http://localhost:3000",
-  method: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
-  allowedHeaders: ["Content-Type", "Authorization"],              // this allows request from any origin
+  method: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],             // this allows request from any origin
   credentials: true,        // this allows cookies, authorization headers, TLS certi..
   optionSuccessStatus: 200, // set status code 200 fir successful request..
 }
