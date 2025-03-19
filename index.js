@@ -16,7 +16,7 @@ const app = express();
 const corsOptions = {
   origin: "*",
   method: "GET, HEAD, PUT, PATCH, POST, DELETE",
-  allowedHeaders: "Content-Type, Authorization",              // this allows request from any origin
+  allowedHeaders: "Content-Type, authorization",              // this allows request from any origin
   credentials: true,        // this allows cookies, authorization headers, TLS certi..
   optionSuccessStatus: 200, // set status code 200 fir successful request..
 }
