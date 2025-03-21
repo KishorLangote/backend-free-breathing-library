@@ -1,6 +1,7 @@
 const express = require("express");
 require("dotenv").config()
 const cors = require("cors") // handle cross origin 
+const serverless = require("serverless-http") // yo handle http requests..
 const UserRoute = require("./routes/userRoute")
 const BookRoute = require("./routes/bookRoute")
 const favoriteRoute = require("./routes/favoriteRoute")
@@ -42,6 +43,10 @@ initializeDatabase()
 
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Server running on port ${PORT}`);
+// });
+
+module.exports =  serverless(app)
+
+
