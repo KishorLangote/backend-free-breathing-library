@@ -138,7 +138,7 @@ router.post("/sign-in", async (req, res) => {
   }
 });
 
-module.exports = router;
+
 
 // Get-User-Information
 router.get("/get-user-information", authenticateToken, async (req, res) => {
