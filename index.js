@@ -24,6 +24,9 @@ const corsOptions = {
 app.use(cors(corsOptions))  // allowing the browser to make cross origin request to the server.
 app.use(express.json()) 
 
+// connect db..
+initializeDatabase()
+
 
 // Routes
 app.use("/api/v1", UserRoute)
@@ -38,8 +41,6 @@ app.get("/", (req, res) => {
   res.send("Hello server!!");
 });
 
-// connect db..
-initializeDatabase()
 
 const PORT = process.env.PORT || 3000;
 
